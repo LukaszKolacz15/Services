@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 
 
-
 public class MainActivity extends Activity {
 
     @Override
@@ -13,6 +12,17 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        startService(new Intent(this, SimpleIntentService.class));
+
+//        INTENT SERVICE:
+
+//        Intent service = new Intent(this, SimpleIntentService.class);
+//        startService(service);
+//        stopService(service);
+
+
+//      SERVICE:
+
+        Intent service = new Intent(this, SimpleService.class);
+        startService(service);
     }
 }
